@@ -5,15 +5,15 @@ export function CategorySelection({ categories, onSelect }) {
   return (
     <div className="category-card">
       <h1>Select a Category</h1>
-      <ul>
+      <div className="category-container">
         {categories.map((category, index) => (
-          <li key={index}>
+          <div className="category" key={index}>
             <button onClick={() => onSelect(category)}>
               {category[0].category}
             </button>
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
